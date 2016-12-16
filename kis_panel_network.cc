@@ -2404,9 +2404,9 @@ int Kis_Netlist::PrintNetworkLine(Kis_Display_NetGroup *ng,
 			else
 				name = ng->GetName(NULL);
 
-			snprintf(rline + rofft, max - rofft, "%-20.20s", 
+			snprintf(rline + rofft, max - rofft, "%-32.32s", 
 					 name.c_str());
-			rofft += 20;
+			rofft += 32;
 		} else if (b == bcol_shortname) {
 			string name;
 
@@ -2675,8 +2675,8 @@ void Kis_Netlist::DrawComponent() {
 				snprintf(rline + rofft, 1024 - rofft, " ");
 				rofft += 1;
 			} else if (b == bcol_name) {
-				snprintf(rline + rofft, 1024 - rofft, "%-20.20s", "Name");
-				rofft += 20;
+				snprintf(rline + rofft, 1024 - rofft, "%-32.32s", "Name");
+				rofft += 32;
 			} else if (b == bcol_shortname) {
 				snprintf(rline + rofft, 1024 - rofft, "%-10.10s", "Name");
 				rofft += 10;
@@ -3907,8 +3907,8 @@ int Kis_Clientlist::PrintClientLine(Netracker::tracked_client *cli,
 			snprintf(rline + rofft, max - rofft, "%c", d);
 			rofft += 1;
 		} else if (b == ccol_ssid) {
-			snprintf(rline + rofft, max - rofft, "%-20.20s", "n/a");
-			rofft += 20;
+			snprintf(rline + rofft, max - rofft, "%-32.32s", "n/a");
+			rofft += 32;
 		} else if (b == ccol_freq_mhz) {
 			unsigned int maxmhz = 0, maxval = 0;
 
@@ -4089,8 +4089,8 @@ void Kis_Clientlist::DrawComponent() {
 				snprintf(rline + rofft, 1024 - rofft, " ");
 				rofft += 1;
 			} else if (cc == ccol_ssid) {
-				snprintf(rline + rofft, 1024 - rofft, "%-20.20s", "SSID");
-				rofft += 20;
+				snprintf(rline + rofft, 1024 - rofft, "%-32.32s", "SSID");
+				rofft += 32;
 			} else if (cc == ccol_mac) {
 				snprintf(rline + rofft, 1024 - rofft, "%-17s", "MAC");
 				rofft += 17;
