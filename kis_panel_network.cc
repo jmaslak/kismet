@@ -2587,8 +2587,8 @@ int Kis_Netlist::PrintNetworkLine(Kis_Display_NetGroup *ng,
 				}
 			}
 
-			snprintf(rline + rofft, max - rofft, "%-10.10s", clist.c_str());
-			rofft += 10;
+			snprintf(rline + rofft, max - rofft, "%-12.12s", clist.c_str());
+			rofft += 12;
 		} else {
 			continue;
 		}
@@ -2732,8 +2732,8 @@ void Kis_Netlist::DrawComponent() {
 				snprintf(rline + rofft, 1024 - rofft, "%-3.3s", "Cty");
 				rofft += 3;
 			} else if (b == bcol_seenby) {
-				snprintf(rline + rofft, 1024 - rofft, "%-10.10s", "Seen By");
-				rofft += 10;
+				snprintf(rline + rofft, 1024 - rofft, "%-12.12s", "Seen By");
+				rofft += 12;
 			} else if (b == bcol_ip) {
 				snprintf(rline + rofft, 1024 - rofft, "%-15.15s", "Best-Guess IP");
 				rofft += 15;
@@ -3016,7 +3016,7 @@ void Kis_Netlist::DrawComponent() {
 							}
 						}
 
-						snprintf(rline + rofft, 1024 - rofft, "SeenBy: %-10.10s", 
+						snprintf(rline + rofft, 1024 - rofft, "SeenBy: %-12.12s",
 								 clist.c_str());
 						rofft += kismin(18, 8 + clist.length());
 					} else {
